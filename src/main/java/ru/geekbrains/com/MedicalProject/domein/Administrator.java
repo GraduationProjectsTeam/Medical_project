@@ -2,6 +2,7 @@ package ru.geekbrains.com.MedicalProject.domein;
 
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
+import lombok.NonNull;
 
 import javax.persistence.Entity;
 
@@ -9,6 +10,10 @@ import javax.persistence.Entity;
 @AllArgsConstructor
 @Entity
 public class Administrator {
-    private String login;
-    private String password;
+    @NonNull
+    private String adminTelNum;
+
+    private String adminName;
+
+
 }

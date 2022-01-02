@@ -10,19 +10,31 @@ import java.util.Calendar;
 @NoArgsConstructor
 @Entity
 public class Call {
-    private Long ID;
+    private Long CallId;
+
     private Calendar callData; //генерируется
-    private String SNILS;
-    private String FamilyName;
-    private String FirstName;
-    private String FathersName;
-    private Calendar bornData;
+
+    private String patientSNILS;
+
+    private String patientFamilyName;
+
+    private String patientFirstName;
+
+    private String patientFathersName;
+
+    private Calendar patientBornData;
+    @NonNull
+    private String patientTelNum;
     @NonNull
     private String callAddress; //внимание! Заложить в логику вопрос по домашнему ли адресу пациент!
-    private String district;
+
+    private String callDistrict;
+
     private String symptoms;
+
     private String comments;
-    private boolean resuscitation;
-    private boolean child;
-    private boolean payment; //не выводится в форму для заполнения
+
+    private boolean needResuscitation;
+
+    private boolean callForChild;
 }

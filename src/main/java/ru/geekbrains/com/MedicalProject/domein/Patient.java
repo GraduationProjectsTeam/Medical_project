@@ -10,18 +10,26 @@ import java.util.Calendar;
 @Entity
 public class Patient {
     @NonNull
-    private String SNILS;
+    private String patientSNILS;
     @NonNull
-    private String FamilyName;
+    private String patientFamilyName;
     @NonNull
-    private String FirstName;
-    private String FathersName;
+    private String patientFirstName;
+
+    private String patientFathersName;
     @NonNull
-    private Calendar bornData;
+    private Calendar patientBornDate;
+
+    private char patientSex;
     @NonNull
-    private String homeAddress;
-    private String district;
-    private Calendar registrationData; //генерируется
-    private int calls;                 //не выводится в форму для заполнения
+    private String patientTelNum;
+
+    private String patientHomeAddress;
+
+    private String patientDistrict;
+
+    private Calendar patientRegistrationDate; //генерируется
+
+    private int patientCalls;                 //не выводится в форму для заполнения
 
 }

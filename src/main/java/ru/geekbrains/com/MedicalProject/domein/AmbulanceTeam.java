@@ -7,20 +7,22 @@ import lombok.NonNull;
 
 import javax.persistence.Entity;
 import java.util.Calendar;
-import java.util.Map;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
 public class AmbulanceTeam {
     @Generated
-    private Long ID;
-    @NonNull
-    private String organisation;
-    private Calendar dataOfChange; //генерируется
+    private Long id;
+
+    private Calendar dateOfChange; //генерируется
     @NonNull
     private String doctorName;
-    private Map<String,String> teamNamesArr; //в форме написать еще 3-4 ячейки звание-фио
-                                        // (либо кнопку для открытие граф по необходимости )
-    private String district;
+
+    private String teamNames; //в форме можно в 1 строчку или одним м.
+    private String ambTelNum;
+
+    private String ambDistrict;
+    @NonNull
+    private Long organisationId; //референс на организацию
 }

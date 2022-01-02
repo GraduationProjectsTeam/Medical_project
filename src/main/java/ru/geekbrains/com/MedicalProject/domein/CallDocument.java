@@ -6,21 +6,35 @@ import lombok.NonNull;
 import java.util.Calendar;
 
 public class CallDocument {
-    private Long callID;
-    private Calendar callData;
-    private Calendar documentData;
-    private String SNILS;
-    private String FamilyName;
-    private String FirstName;
-    private String FathersName;
-    private Calendar bornData;
+    private Long callId;
+
+    private Calendar callDate;
+
+    private Calendar documentDate;
+
+    private String patientSNILS;
+
+    private String patientFamilyName;
+
+    private String patientFirstName;
+
+    private String patientFathersName;
+
+    private Calendar patientBornDate;
     @NonNull
     private String callAddress;
-    private String district;
+
+    private String callDistrict;
+
     private String symptoms;
-    private String help;
-    private boolean resuscitation;
-    private boolean child;
-    private boolean hospitalization;
+
+    private String ambHelp;
+
+    private boolean needResuscitation;
+
+    private boolean callForChild;
+
+    private boolean patientHospitalization;
+
     private boolean payment;
 }
