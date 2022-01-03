@@ -4,12 +4,13 @@ import lombok.NoArgsConstructor;
 import lombok.NonNull;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.Calendar;
 
 @NoArgsConstructor
 @Entity
 public class Patient {
-    @NonNull
+    @Id
     private String patientSNILS;
     @NonNull
     private String patientFamilyName;

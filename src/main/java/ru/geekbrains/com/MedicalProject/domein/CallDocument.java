@@ -1,11 +1,11 @@
 package ru.geekbrains.com.MedicalProject.domein;
 
-
 import lombok.NonNull;
-
+import javax.persistence.Id;
 import java.util.Calendar;
 
 public class CallDocument {
+    @Id
     private Long callId;
 
     private Calendar callDate;
@@ -37,4 +37,6 @@ public class CallDocument {
     private boolean patientHospitalization;
 
     private boolean payment;
+
+    private String doctorName;
 }

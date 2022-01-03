@@ -1,3 +1,9 @@
+create table client (
+login varchar(50),
+pass varchar(100),
+status varchar(50)
+);
+
 create table patients (
 patientSNILS varchar(255) primary key,
 patientFamilyName varchar(255) not null,
@@ -35,8 +41,8 @@ doctorName varchar(255),
 teamNames text,
 ambTelNum varchar(20),
 ambDistrict varchar(30),
-organisationId bigserial not null;
-foreign key (organisationId) references organization (organisationId);
+organisationId bigserial not null,
+foreign key (organisationId) references organization (organisationId));
 
 insert into ambulanceTeams (id, dataOfChange, doctorName, teamNames, ambTelNum, ambDistrict, organisationId)
 values
@@ -48,7 +54,7 @@ create table organization (
 organizationId bigserial primary key,
 organizationName varchar(255) not null,
 organizationTelNum varchar(20),
-registrationDate date;)
+registrationDate date);
 
 create table if not exsists call(
 callId bigserial primary key,
@@ -64,7 +70,7 @@ callDistrict varchar(30),
 symptoms text,
 comments text,
 needResuscitation boolean,
-callForChild boolean;)
+callForChild boolean);
 
 create table if not exists callDocument(
 callId bigserial primary key,
@@ -82,4 +88,4 @@ ambHelp text,
 needResuscitation boolean,
 callForChild boolean,
 patientHospitalization boolean,
-payment boolean;)
+payment boolean);

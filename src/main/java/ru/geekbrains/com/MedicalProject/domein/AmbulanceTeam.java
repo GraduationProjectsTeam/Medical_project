@@ -19,7 +19,7 @@ public class AmbulanceTeam {
     @NonNull
     private String doctorName;
 
-    private String teamNames; //в форме можно в 1 строчку или одним м.
+    private String teamNames; //в форме можно в 1 строчку или одним полем.
     private String ambTelNum;
 
     private String ambDistrict;
