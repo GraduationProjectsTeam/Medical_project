@@ -4,6 +4,7 @@ pass varchar(100),
 status varchar(50)
 );
 
+delete if exists table patients;
 create table patients (
 patientSNILS varchar(255) primary key,
 patientFamilyName varchar(255) not null,
@@ -26,6 +27,7 @@ values
 ('234123567','Retov','Grisha',16.01.2000,'89152345456'),
 ('234895678','Bitov','Anton',19.01.2000,'89152345456');
 
+delete if exists table administrators;
 create table administrators (
 adminTelNum varchar(20) primary key,
 adminName varchar(255) not null);
@@ -34,6 +36,7 @@ insert into administrators (adminTelNum,adminName)
 values
 ('89163456587','Samorezov');
 
+delete if exists ambulanceTeams;
 create table ambulanceTeams (
 id bigserial primary key,
 dateOfChange date,
@@ -50,11 +53,16 @@ values
 (02,15.01.2022,'Krylov','Ter, Idov', '89264535566','S','01'),
 (03,15.01.2022,'Mitov','Krotova, Molotov ', '89264533466','W','01');
 
+delete if exists organization;
 create table organization (
 organizationId bigserial primary key,
 organizationName varchar(255) not null,
 organizationTelNum varchar(20),
 registrationDate date);
+
+insert into (organizationId, organizationName, organizationTelNum)
+values
+('01', 'First', '89156667788')
 
 create table if not exsists call(
 callId bigserial primary key,

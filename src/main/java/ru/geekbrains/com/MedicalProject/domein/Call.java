@@ -1,8 +1,6 @@
 package ru.geekbrains.com.MedicalProject.domein;
 
-import lombok.Generated;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
+import lombok.*;
 
 
 import javax.persistence.Entity;
@@ -10,11 +8,12 @@ import javax.persistence.Id;
 import java.util.Calendar;
 
 @NoArgsConstructor
-@Entity
+@Data
+//@Entity
 public class Call {
-    @Id
-    @Generated
-    private Long CallId;
+//    @Id
+//    @Generated
+    private Long callId;
 
     private Calendar callData; //генерируется
 
@@ -42,4 +41,8 @@ public class Call {
 
     private boolean callForChild;
 
+    //TODO убрать метод после появление базы данных
+    public void setCallId(Long id) {
+        this.callId = id;
+    }
 }
